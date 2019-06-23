@@ -3,11 +3,11 @@ FROM nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04
 
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 
-RUN mkdir $HOME/Project
-WORKDIR $HOME/Project
+RUN mkdir /root/Project
+WORKDIR /root/Project
 
-COPY .vimrc $HOME/
-COPY requirements.txt $HOME/Project
+COPY .vimrc /root/
+COPY requirements.txt /root/Project
 
 RUN \
     apt-get update  && \
@@ -58,11 +58,10 @@ RUN \
     # jupyter nbextension enable vim_binding/vim_binding && \
     #
     # Install python dependencies
-    echo 'Install python dependencies' && \
     pip install -r requirements.txt && \
     rm requirements.txt
 
 EXPOSE 8888
 EXPOSE 22
 
-CMD jupyter notebook --no-browser --allow-root --port 8888 -ip=0.0.0.0 --NotebookApp.token='docker'
+CMD jupyter notebook --notebook-dir=/root/Project --no-browser --allow-root --port 8888 -ip=0.0.0.0 --NotebookApp.token='docker'

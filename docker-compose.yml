@@ -6,7 +6,6 @@ services:
       context: . 
     image: python_dev
     container_name: python_dev
-    command: service ssh restart
     command: jupyter notebook --no-browser --allow-root --port 8888 --ip=0.0.0.0 --NotebookApp.token='docker'
     ports:
       - "2222:22"
