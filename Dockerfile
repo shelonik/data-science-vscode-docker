@@ -19,7 +19,10 @@ RUN \
         htop \
         nano \
         man \
-        cmake
+        cmake \
+        libsm6 \
+        libxext6 \
+        libxrender-dev
 
 # Install ssh server, allow password auth and make user pass 'docker'
 RUN \

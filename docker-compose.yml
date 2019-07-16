@@ -11,7 +11,7 @@ services:
       - "2222:22"
       - "8001:8888"
     env_file:
-      - .env
+      - .env_vars
     volumes:
       - .:/root/Project
     runtime: nvidia
