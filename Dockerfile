@@ -22,7 +22,9 @@ RUN \
         cmake \
         libsm6 \
         libxext6 \
-        libxrender-dev
+        libxrender-dev \
+	tmux \
+	screen \
 
 # Install ssh server, allow password auth and make user pass 'docker'
 RUN \
