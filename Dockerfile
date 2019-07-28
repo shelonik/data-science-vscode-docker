@@ -23,8 +23,8 @@ RUN \
         libsm6 \
         libxext6 \
         libxrender-dev \
-	tmux \
-	screen \
+        tmux \
+        screen
 
 # Install ssh server, allow password auth and make user pass 'docker'
 RUN \

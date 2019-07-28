@@ -8,7 +8,6 @@ https://download.pytorch.org/whl/cu100/torchvision-0.3.0-cp36-cp36m-linux_x86_64
 
 tensorflow-gpu
 
-furure
 tb-nightly
 gensim
 opencv-python
