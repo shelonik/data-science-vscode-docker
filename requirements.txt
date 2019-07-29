@@ -12,3 +12,4 @@ tb-nightly
 gensim
 opencv-python
 matplotlib
+future
